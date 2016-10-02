@@ -1,0 +1,157 @@
+/* Empty. Add your own CSS if you like */
+
+.contacts-search ion-item .button {
+  float: right;
+}
+
+.contacts-search label.item {
+  padding: 16px;
+}
+
+.contacts-search input {
+  padding: 16px;
+  border: 2px solid lightgrey;
+}
+
+.detail.birthday {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.detail.website {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.detail.occupation {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contacts h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.home .settings-button{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.buttons > * {
+    margin: 10px;
+    width: 95px !important;
+}
+
+.settings-fields {
+  margin: 10px;
+}
+
+.settings-fields label.item-input {
+  margin: 10px;
+  background: lightgrey;
+}
+
+.global-header {
+  padding: 10px 10px 30px 10px;
+}
+
+.global-header .logo {
+  float: left;
+}
+
+.global-header .logo #logo {
+  padding: 10px;
+  max-width: 100px;
+  max-height: 150px;
+}
+
+.global-header .info {
+  float: right;
+  text-align: right;
+}
+
+.global-header .info p {
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 200%;
+  padding: 15px;
+  background-color: lightgrey;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Pie Chart */
+.home .progress-pie-chart {
+width:200px;
+height: 200px;
+border-radius: 50%;
+background-color: #E5E5E5;
+position: relative;
+}
+.home .progress-pie-chart.gt-50 {
+background-color: #81CE97;
+}
+
+.home .ppc-progress {
+content: "";
+position: absolute;
+border-radius: 50%;
+left: calc(50% - 100px);
+top: calc(50% - 100px);
+width: 200px;
+height: 200px;
+clip: rect(0, 200px, 200px, 100px);
+}
+.home .ppc-progress .ppc-progress-fill {
+content: "";
+position: absolute;
+border-radius: 50%;
+left: calc(50% - 100px);
+top: calc(50% - 100px);
+width: 200px;
+height: 200px;
+clip: rect(0, 100px, 200px, 0);
+background: #E5E5E5;
+transform: rotate(0deg);
+}
+.home .gt-50 .ppc-progress {
+clip: rect(0, 100px, 200px, 0);
+}
+.home .gt-50 .ppc-progress .ppc-progress-fill {
+clip: rect(0, 200px, 200px, 100px);
+background: #E5E5E5;
+}
+
+.home .ppc-percents {
+content: "";
+position: absolute;
+border-radius: 50%;
+left: calc(50% - 173.91304px/2);
+top: calc(50% - 173.91304px/2);
+width: 173.91304px;
+height: 173.91304px;
+background: #fff;
+text-align: center;
+display: table;
+}
+.home .ppc-percents span {
+display: block;
+font-size: 2.6em;
+font-weight: bold;
+color: #81CE97;
+}
+
+.home .pcc-percents-wrapper {
+display: table-cell;
+vertical-align: middle;
+}
+
+.home .progress-pie-chart {
+margin: 20px auto 0;
+}

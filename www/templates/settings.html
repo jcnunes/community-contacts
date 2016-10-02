@@ -1,0 +1,21 @@
+<ion-view view-title="Settings">
+  <ion-content>
+    <community-contacts-header logo="{{logo}}" user="{{userId}}"></community-contacts-header>
+    <form ng-submit="saveSettings()">
+      <div class="list settings-fields">
+        <label class="item item-input">
+          <span class="input-label">Server</span>
+          <input type="text" placeholder="IP or domain" ng-model="server">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">ID</span>
+          <input type="text" placeholder="User ID" ng-model="userId">
+        </label>
+      </div>
+      <div class="buttons">
+        <input type="button" class="button button-outline button-dark" ng-click="discard()" value="BACK" />
+        <input type="submit" class="button button-positive" value="UPDATE" />
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

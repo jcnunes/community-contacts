@@ -1,0 +1,32 @@
+<ion-view view-title="Community Contacts">
+  <ion-content class="home">
+    <community-contacts-header logo="{{logo}}" user="{{userId}}"></community-contacts-header>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="password" placeholder="Secret Code" ng-model="loginData.password" ng-change="passwordEntered()" ng-model-options="{ debounce: { 'default': 500, 'blur': 0 } }">
+      </label>
+      <div class="assertive" style="text-align: center" ng-if="message">
+        <i class="ion-information-circled"></i> {{message}}
+      </div>
+    </div>
+    <div ng-if="syncing">
+      <div class="bar_container">
+        <div id="main_container">
+          <div id="pbar" class="progress-pie-chart" ng-class="{'gt-50': progress > 50}" data-percent="0">
+            <div class="ppc-progress">
+              <div class="ppc-progress-fill" style="transform: rotate({{360 * progress / 100}}deg)"></div>
+            </div>
+            <div class="ppc-percents">
+              <div class="pcc-percents-wrapper">
+                <ion-spinner icon="lines"></ion-spinner> <span>{{progress}} %</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-button">
+      <button class="button button-clear button-positive settings" ng-click="openSettings()">Settings</button>
+    </div>
+  </ion-content>
+</ion-view>

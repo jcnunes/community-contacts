@@ -1,0 +1,19 @@
+<ion-view view-title="Community Contacts">
+  <ion-content class="home">
+    <community-contacts-header logo="{{logo}}" user="{{userId}}"></community-contacts-header>
+    <div class="bar_container">
+      <div id="main_container">
+        <div id="pbar" class="progress-pie-chart" ng-class="{'gt-50': progress > 50}" data-percent="0">
+          <div class="ppc-progress">
+            <div class="ppc-progress-fill" style="transform: rotate({{360 * progress / 100}}deg)"></div>
+          </div>
+          <div class="ppc-percents">
+            <div class="pcc-percents-wrapper">
+              <ion-spinner icon="lines"></ion-spinner> <span>{{progress}} %</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

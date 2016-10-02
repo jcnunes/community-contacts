@@ -1,0 +1,11 @@
+<div class="global-header">
+  <div class="logo">
+    <img id="logo" src="{{logo}}" />
+  </div>
+  <div class="info">
+    <p>{{user}}</p>
+    <button class="button icon-left ion-chevron-left button-stable" ng-if="backState" ng-click="goBack(backState)">Back</button>
+    <button class="button icon-left ion-android-download button-calm" ng-if="sync" ng-click="syncMethod()">Update</button>
+  </div>
+  <div style="clear: both"><!-- --></div>
+</div>

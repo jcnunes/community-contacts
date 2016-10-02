@@ -1,0 +1,16 @@
+<ion-view view-title="Contact Details">
+  <ion-content>
+    <community-contacts-header logo="{{logo}}" user="{{userId}}" back-state="app.contacts"></community-contacts-header>
+    <div class="card">
+      <div class="contacts item item-body item-text-wrap">
+        <h2>{{contact.base_contact.last_name}}, {{contact.base_contact.first_name}}</h2>
+        <a class="button icon-left ion-ios7-telephone button-dark button-outline" ng-href="tel: {{contact.base_contact.main_number}}">Call {{contact.base_contact.main_number}}</a>
+        <div ng-repeat="detail in contact.details">
+          <p class="detail {{detail.key}}">{{detail.label}}</p>
+          <p ng-if="detail.key !== 'website'">{{detail.value}}</p>
+          <a href="{{detail.value}}" ng-if="detail.key === 'website'" class="website">{{detail.value}}</a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

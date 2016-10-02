@@ -1,0 +1,14 @@
+<ion-view view-title="Contacts">
+  <ion-content class="contacts-search">
+    <community-contacts-header logo="{{logo}}" user="{{userId}}" sync="online" sync-method="syncMethod()"></community-contacts-header>
+    <p>{{error}}</p>
+    <label class="item item-input">
+      <input type="text" placeholder="Search" ng-model="q" ng-model-options="{ debounce: { 'default': 500, 'blur': 0 } }">
+    </label>
+    <ion-list>
+      <ion-item ng-repeat="contact in contacts | contactFilter:q | orderBy:'doc.base_contact.last_name'" href="#/app/contact/{{contact.doc.base_contact.contact_id}}">
+        <h2>{{contact.doc.base_contact.last_name}}, {{contact.doc.base_contact.first_name}}<span><a ng-href="tel: {{contact.doc.base_contact.main_number}}" class="button button-clear"><i class="icon ion-iphone"></i></a></span></h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
